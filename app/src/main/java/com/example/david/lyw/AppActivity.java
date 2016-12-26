@@ -17,10 +17,13 @@ import rx.functions.Action1;
 public class AppActivity extends BaseActivity{
 
     private ProgressDialog mProgressDialog;
+
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
+
+
 
     @Override
     protected void onDestroy() {

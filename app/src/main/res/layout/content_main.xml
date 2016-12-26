@@ -20,4 +20,17 @@
         android:background="@color/colorAccent"
         android:padding="10dp"
         android:text="点击" />
+    <Button
+        android:id="@+id/btn_click2"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/btn_click"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="进入下一页,测试" />
+
+    <com.lyw.view.BannerView
+        android:id="@+id/bannerView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp" />
 </RelativeLayout>
