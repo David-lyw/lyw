@@ -13,28 +13,27 @@ import com.lyw.dialog.CommonDialog;
 /**
  * Created by David on 16/12/27.
  */
-public class TestDialog extends CommonDialog{
-    public TestDialog(Context context){
-        super(context,R.layout.dialog_share);
+public class TestDialog extends CommonDialog {
+
+    public TestDialog(Context context) {
+        super(context, R.layout.dialog_share);
     }
 
 
     @Override
     public void showDialog() {
-        Button btn= (Button) getView(R.id.btn_cancel);
+        Button btn = (Button) getView(R.id.btn_cancel);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(viewClick!=null){
+                if (viewClick != null) {
                     viewClick.onClick(1);
-                    dismissDialog();
+                    dismissDialog();//调用父类的dimiss方法。
                 }
             }
         });
-        super.showDialog();
+        super.showDialog();//调用父类的显示方法。
     }
-
 
 
     public interface ViewClick {
