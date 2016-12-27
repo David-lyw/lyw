@@ -13,6 +13,7 @@ import java.util.List;
 /**
  * Created by David on 16/12/26.
  * RecyclerView要求必须使用ViewHolder模式.
+ * 使用范围:包含RecyclerView的控件。
  */
 public abstract class HolderAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     private static final int TYPE_ITEM = 0;
