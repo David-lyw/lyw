@@ -48,6 +48,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.david.activity.HolderActivity" />
+        <activity android:name="com.example.david.activity.PulltoLoadviewActivity" />
     </application>
 
 </manifest>

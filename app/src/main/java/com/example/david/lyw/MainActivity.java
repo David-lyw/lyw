@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.david.activity.HolderActivity;
+import com.example.david.activity.PulltoLoadviewActivity;
 import com.example.david.bean.rankingBean;
 import com.example.david.dialog.TestDialog;
 import com.example.david.http.HttpApiService;
@@ -40,6 +41,7 @@ public class MainActivity extends AppActivity {
     public BannerView bannerView;
     public TextView tv_getcode;
     public TextView tv_dialog;
+    public TextView tv_pulltoloadview;
 
     private int[] gifResIds = {
             R.raw.bird,
@@ -57,6 +59,7 @@ public class MainActivity extends AppActivity {
         bannerView = (BannerView) findViewById(R.id.bannerView);
         tv_getcode = (TextView) findViewById(R.id.tv_getcode);
         tv_dialog = (TextView) findViewById(R.id.tv_dialog);
+        tv_pulltoloadview = (TextView) findViewById(R.id.tv_pulltoloadview);
         final CountDownTimerUtils timerUtils = new CountDownTimerUtils(tv_getcode, 60000, 1000);
         tv_getcode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +135,13 @@ public class MainActivity extends AppActivity {
             }
         });
 
+        tv_pulltoloadview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PulltoLoadviewActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

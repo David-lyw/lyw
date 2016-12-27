@@ -12,7 +12,7 @@ import business.esale.hivedrp.com.mylibrary.R;
 /**
  * Created by David on 16/12/27.
  * <p/>
- * 使用：(获取验证码倒计时)
+ * 使用：(获取验证码倒计时),使用时还需要注意。建议不使用。
  * CountDownTimerUtils mCountDownTimerUtils = new CountDownTimerUtils(mButton, 60000, 1000);
  * mCountDownTimerUtils.start();
  */

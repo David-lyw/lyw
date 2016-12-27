@@ -1,6 +1,7 @@
 package com.example.david.http;
 
 import com.example.david.Dto.ActivityImageDto;
+import com.example.david.Dto.CollectionDto;
 import com.example.david.Dto.FAQDto;
 import com.example.david.Dto.FeedBackDto;
 import com.example.david.Dto.GetCashDto;
@@ -444,4 +445,15 @@ public interface HttpApiService {
     @GET("activity/next")
     Observable<HttpResult<RankingDataBean>> getNextActivityDetail(@Query("userId") String userId,
                                                                   @Query("activityId") String id);
+
+
+    /**
+     * 2.18 获取用户收藏记录(关注 模块)
+     * http://emall.eteclab.com/api/v1/user/collectionList
+     */
+    @GET("user/collectionList")
+    Observable<HttpResult<List<CollectionDto>>> getCollectionList(@Query("userId") String userId,
+                                                                  @Query("page") String page,
+                                                                  @Query("size") String size);
+
 }

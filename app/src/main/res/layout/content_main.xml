@@ -53,4 +53,13 @@
         android:background="@color/colorAccent"
         android:layout_margin="10dp"
         android:text="显示弹出框" />
+
+    <TextView
+        android:id="@+id/tv_pulltoloadview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog"
+        android:background="@color/colorAccent"
+        android:layout_margin="10dp"
+        android:text="pulltoloadview" />
 </RelativeLayout>
