@@ -12,15 +12,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.david.activity.HolderActivity;
 import com.example.david.bean.rankingBean;
+import com.example.david.dialog.TestDialog;
 import com.example.david.http.HttpApiService;
 import com.example.david.http.HttpUtilsHolder;
 import com.example.david.widget.Contants;
 import com.lyw.BaseActivity;
 import com.lyw.http.HttpResult;
 import com.lyw.view.BannerView;
+import com.lyw.view.CountDownTimerUtils;
 import com.lyw.view.GifView;
 import com.squareup.picasso.Picasso;
 
@@ -34,6 +38,8 @@ public class MainActivity extends AppActivity {
     public Button btn;
     public Button btn2;
     public BannerView bannerView;
+    public TextView tv_getcode;
+    public TextView tv_dialog;
 
     private int[] gifResIds = {
             R.raw.bird,
@@ -49,6 +55,38 @@ public class MainActivity extends AppActivity {
         btn = (Button) findViewById(R.id.btn_click);
         btn2 = (Button) findViewById(R.id.btn_click2);
         bannerView = (BannerView) findViewById(R.id.bannerView);
+        tv_getcode = (TextView) findViewById(R.id.tv_getcode);
+        tv_dialog = (TextView) findViewById(R.id.tv_dialog);
+        final CountDownTimerUtils timerUtils = new CountDownTimerUtils(tv_getcode, 60000, 1000);
+        tv_getcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timerUtils.start();
+            }
+        });
+
+        tv_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final TestDialog dialog = new TestDialog(MainActivity.this);
+                dialog.setViewClick(new TestDialog.ViewClick() {
+                    @Override
+                    public void onClick(int tag) {
+                        switch (tag) {
+                            case 1:
+                                //dialog.dismissDialog();
+                                Toast.makeText(MainActivity.this, "ddddd", Toast.LENGTH_SHORT).show();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
+                dialog.showDialog();
+            }
+        });
+
+
         //setCarousel();
         setGifCarousel();
 

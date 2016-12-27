@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Widget_GifView" />
+
+
+    <!-- dialog-->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@color/transparent_background</item>
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 </resources>
