@@ -2,6 +2,7 @@ package com.example.david.lyw;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -168,6 +169,13 @@ public class MainActivity extends AppActivity {
         }
         bannerView.setViewPagerViews(list);
         //bannerView.start();
+    }
+
+
+    //打开 辅助功能 界面。
+    public void openAccessibility(View view) {
+        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        startActivity(intent);
     }
 
 }

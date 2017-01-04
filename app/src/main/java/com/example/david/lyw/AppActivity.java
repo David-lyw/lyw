@@ -1,8 +1,11 @@
 package com.example.david.lyw;
 
 import android.app.ProgressDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.david.http.HttpUtilsHolder;
 import com.lyw.BaseActivity;
@@ -14,15 +17,16 @@ import rx.functions.Action1;
 /**
  * Created by David on 16/12/21.
  */
-public class AppActivity extends BaseActivity{
+public class AppActivity extends BaseActivity {
 
     private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        handleMaterialStatusBar();
 
+    }
 
 
     @Override
@@ -74,4 +78,19 @@ public class AppActivity extends BaseActivity{
                 });
 
     }
+
+
+    /**
+     * API等级21：Android 5.0 Lollipop
+     */
+    public void handleMaterialStatusBar() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            return;
+
+        Window window = this.getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(0xffE46c62);
+    }
+
 }

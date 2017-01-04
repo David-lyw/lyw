@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by David on 16/12/27.
+ * 使用范围:listview,gridview.
  */
 public abstract class CommonAdapter<T> extends BaseAdapter {
     protected Context mContext;

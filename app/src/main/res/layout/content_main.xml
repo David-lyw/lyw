@@ -31,18 +31,18 @@
         android:text="进入下一页,测试" />
 
 
-
     <com.lyw.view.BannerView
         android:id="@+id/bannerView"
         android:layout_width="match_parent"
         android:layout_height="170dp" />
+
     <TextView
         android:id="@+id/tv_getcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bannerView"
-        android:background="@color/colorAccent"
         android:layout_margin="10dp"
+        android:background="@color/colorAccent"
         android:text="获取验证码" />
 
     <TextView
@@ -50,8 +50,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_getcode"
-        android:background="@color/colorAccent"
         android:layout_margin="10dp"
+        android:background="@color/colorAccent"
         android:text="显示弹出框" />
 
     <TextView
@@ -59,7 +59,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_dialog"
-        android:background="@color/colorAccent"
         android:layout_margin="10dp"
+        android:background="@color/colorAccent"
         android:text="pulltoloadview" />
+
+    <TextView
+        android:id="@+id/tv_accessibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_pulltoloadview"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="openAccessibility"
+        android:text="手机辅助功能" />
 </RelativeLayout>
