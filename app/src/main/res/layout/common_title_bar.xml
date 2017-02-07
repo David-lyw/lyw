@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_90"
+    android:background="@android:color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/color_0f"
+        android:textSize="18sp" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/title_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="19sp" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:gravity="center"
+         />
+
+    <!-- 最左边-->
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:padding="9dp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="9dp"
+        android:visibility="gone" />
+
+
+    <!--最右边-->
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:padding="9dp"
+        android:visibility="gone" />
+    <!--最右边-->
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="9dp"
+        android:visibility="gone" />
+
+
+    <!-- 底部横线-->
+    <View
+        android:id="@+id/view_bottomline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray" />
+</RelativeLayout>

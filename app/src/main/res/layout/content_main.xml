@@ -72,4 +72,14 @@
         android:background="@color/colorAccent"
         android:onClick="openAccessibility"
         android:text="手机辅助功能" />
+
+    <TextView
+        android:id="@+id/tv_imagetest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_accessibility"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="openAccessibility"
+        android:text="沉浸式图片" />
 </RelativeLayout>

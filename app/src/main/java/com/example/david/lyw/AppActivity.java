@@ -81,6 +81,7 @@ public class AppActivity extends BaseActivity {
 
 
     /**
+     * 沉浸式状态栏只支持安卓4.4及以上的版本
      * API等级21：Android 5.0 Lollipop
      */
     public void handleMaterialStatusBar() {

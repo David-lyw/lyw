@@ -1,6 +1,7 @@
 package com.lyw.http;
 
 
+import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
@@ -23,11 +24,11 @@ public class HttpUtils {
     private Retrofit mRetrofit;
 
     public HttpUtils(String baseUrl) {
-        this(baseUrl, (Builder)null);
+        this(baseUrl, (Builder) null);
     }
 
     public HttpUtils(String baseUrl, Builder builder) {
-        if(builder == null) {
+        if (builder == null) {
             this.mRetrofit = (new retrofit2.Retrofit.Builder()).client(OkHttpBuilderFactory.INSTANCE.build())
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -42,7 +43,7 @@ public class HttpUtils {
     }
 
     public Object executeService(Class clazz, String methodName, Class[] paramClasses, Object[] params) {
-        return ((Observable)this.executeServiceInIO(clazz, methodName, paramClasses, params)).observeOn(AndroidSchedulers.mainThread());
+        return ((Observable) this.executeServiceInIO(clazz, methodName, paramClasses, params)).observeOn(AndroidSchedulers.mainThread());
     }
 
     public Object executeServiceInIO(Class clazz, String methodName, Class[] paramClasses, Object[] params) {
@@ -50,11 +51,10 @@ public class HttpUtils {
     }
 
 
-
-
-
+    //网络是否连接
     public static boolean isNetworkConnected() {
-        ConnectivityManager mConnectivityManager = (ConnectivityManager) BaseApplication.getApplication().getSystemService("connectivity");
+        //ConnectivityManager mConnectivityManager = (ConnectivityManager) BaseApplication.getApplication().getSystemService("connectivity");
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) BaseApplication.getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
         return mNetworkInfo != null && mNetworkInfo.isAvailable();
     }
